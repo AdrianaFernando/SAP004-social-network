@@ -131,7 +131,6 @@ export const updateLikes = async (idPost) => {
       });
   }
 };
-
 export const deletePost = (idDelete) => {
   firebase
     .firestore()
@@ -163,4 +162,3 @@ export const feedPostsProfile = (func, postArea) => {
       });
     });
 };
-

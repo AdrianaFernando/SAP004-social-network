@@ -216,9 +216,12 @@ export const feed = () => {
           </div>
           </li>
         </ul>
+<<<<<<< HEAD
         <div id="txt-commits">
         
         </div>
+=======
+>>>>>>> 5a17ba987269ac25d2c10acd0d2f93cc0b312c3d
       </div>
     `;
   
@@ -253,9 +256,7 @@ export const feed = () => {
   })
   backFeed.addEventListener('click', () => {
     feedPosts(textDrinks)
-
   })
-
 
   btnSair.addEventListener('click', ()=> {
     firebase.auth().signOut();
@@ -278,8 +279,6 @@ export const feed = () => {
     const btnLike = document.querySelectorAll('.like');
     const btnDelete = document.querySelectorAll('.delete');
     const btnEdit = document.querySelectorAll('.edit');
-    const btnComment = document.querySelectorAll('.comment');
-    
 
     btnLike.forEach(btn => {
       btn.addEventListener('click', (event) =>{
@@ -287,7 +286,7 @@ export const feed = () => {
         const idPost = btn.dataset.likes
         updateLikes(idPost)
       });
-    });
+  });
 
     btnDelete.forEach(btn => {
       btn.addEventListener('click', (event) =>{
@@ -302,7 +301,6 @@ export const feed = () => {
       event.preventDefault();
       const idTxt = btn.dataset.text
       const element = document.querySelector(`p[data-post="${idTxt}"`)
-      console.log(element)
       if (element.contentEditable !== 'true'){
         element.contentEditable = true;
         element.focus();
