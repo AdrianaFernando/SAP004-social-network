@@ -218,7 +218,7 @@ export const feed = () => {
           </li>
         </ul>
         <div id="txt-commits">
-        <textarea class="area-comments" data-comments = "${posts.id}"></textarea>
+        
         </div>
       </div>
     </main>
@@ -266,8 +266,8 @@ export const feed = () => {
     const btnDelete = document.querySelectorAll('.delete');
     const btnEdit = document.querySelectorAll('.edit');
     const btnComment = document.querySelectorAll('.comment');
-    //const printComment = document.querySelectorAll('#txt-commits');
-    const printComment = document.querySelectorAll('.area-comments');
+    const printComment = document.querySelectorAll('#txt-commits');
+    //const printComment = document.querySelectorAll('.area-comments');
 
     btnLike.forEach(btn => {
         btn.addEventListener('click', (event) =>{
@@ -304,14 +304,19 @@ export const feed = () => {
     btnComment.forEach(btn => {
         btn.addEventListener('click', (event) =>{
         event.preventDefault();
-        printComment.forEach(txt => {
+        printComment.innerHTML = (`<textarea
+        name="textearea"
+        id="wrt-comment"
+        placeholder="escreva um comentario!"
+      ></textarea>`)
+        /* printComment.forEach(txt => {
           const idArea = txt.dataset.commits
           console.log(idArea)
           printComment.style.display = 'block'
           const idComment = btn.dataset.commits
           console.log (commits)
           commits(idComment)
-        })
+        }) */
       });
   });
 
