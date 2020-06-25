@@ -216,12 +216,7 @@ export const feed = () => {
           </div>
           </li>
         </ul>
-<<<<<<< HEAD
-        <div id="txt-commits">
-        
         </div>
-=======
->>>>>>> 5a17ba987269ac25d2c10acd0d2f93cc0b312c3d
       </div>
     `;
   
